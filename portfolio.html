@@ -1,0 +1,429 @@
+<div id="particles-js"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Developer Portfolio</title>
+
+<style>
+    .hero {
+    text-align: left;
+    padding: 100px 80px;
+    background: linear-gradient(135deg, #020617, #020617);
+}
+
+.top-line {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.name span {
+    color: #38bdf8;
+}
+
+.role {
+    margin-top: 20px;
+    letter-spacing: 3px;
+    color: #94a3b8;
+}
+
+/* DETAILS GRID */
+.details-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    font-size: 14px;
+    color: #cbd5f5;
+}
+
+.details-grid small {
+    color: #38bdf8;
+    letter-spacing: 2px;
+}
+
+    .details {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #cbd5f5;
+}
+
+.details p {
+    margin: 5px 0;
+}
+    .features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.feature {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px #38bdf8;
+}
+    .tools-container span {
+    display: inline-block;
+    background: #1e293b;
+    color: #38bdf8;
+    padding: 10px 15px;
+    margin: 8px;
+    border-radius: 20px;
+    border: 1px solid #38bdf8;
+    transition: 0.3s;
+}
+
+.tools-container span:hover {
+    background: #38bdf8;
+    color: #000;
+}
+    .about-container {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 1.6;
+    color: #cbd5f5;
+    transition: 0.3s;
+}
+
+.about-container:hover {
+    box-shadow: 0 0 20px #38bdf8;
+}
+    img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+    #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #020617;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background: radial-gradient(circle at 20% 30%, #0ea5e9 0%, transparent 25%),
+                radial-gradient(circle at 80% 70%, #9333ea 0%, transparent 25%),
+                radial-gradient(circle at 50% 50%, #1e3a8a 0%, #020617 70%);
+    background-color: #020617;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    color: #38bdf8;
+}
+
+.hero p {
+    color: #94a3b8;
+}
+
+/* BUTTON */
+.btn {
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+}
+
+/* SECTION */
+section {
+    padding: 50px;
+}
+
+h2 {
+    color: #38bdf8;
+}
+
+/* PROJECT CARDS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    background: #38bdf8;
+    color: #000;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <h2>🎮 My Portfolio</h2>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<p class="top-line">// Game Design Portfolio • 2025-26</p>
+
+<h1 class="name">
+    RISHIKESH <br>
+</h1>
+
+<p class="role">GAME DESIGN & DEVELOPMENT</p>
+
+<div class="details-grid">
+    <div><small>Roll No.</small><br>2303A51386</div>
+    <div><small>Branch</small><br>3rd Year B.Tech CSE</div>
+    <div><small>Institution</small><br>SR University, Warangal</div>
+    <div><small>Faculty</small><br>Dr. Vijaya Chandra Jadala</div>
+    <div><small>Subject</small><br>Game Mechanics Design & Development</div>
+</div>
+
+</section>
+
+ <section>
+    <h2>🧑‍💻 About Me</h2>
+
+<div class="about-container">
+    <p>
+        I am a passionate Unity Game Developer with a strong interest in designing and developing
+        interactive 2D and 3D games. I enjoy creating engaging gameplay experiences using C# and Unity.
+        I have designed multiple games including 3D car racing games, shooter games, puzzle games,
+        and physics-based simulations. I am still learning new game mechanics and improving my
+        development skills.My goal is to build innovative and immersive games while growing as a professional game developer.
+    </p>
+</div>
+
+</section>
+
+<section 
+id="projects">
+</section>
+
+<div class="projects">
+
+    <div class="card">
+        <h3>🚗 3D Car Racing Game</h3>
+        <img src="car-game.jpg" alt="Car Game">
+        <p>Realistic driving with smooth controls and camera follow.</p>
+    </div>
+
+    <div class="card">
+        <h3>🔫 3D Shooter Game</h3>
+        <img src="shooter-game.jpg" alt="Shooter Game">
+        <p>Enemy shooting with collision detection and spawning system.</p>
+    </div>
+
+    <div class="card">
+        <h3>🌍 Open World Survival</h3>
+        <img src="survival-game.jpg" alt="Survival Game">
+        <p>Explore, survive, and manage health system.</p>
+    </div>
+
+    <div class="card">
+        <h3>🏃 Endless Runner</h3>
+        <img src="runner-game.jpg" alt="Runner Game">
+        <p>Auto-running gameplay with jump mechanics.</p>
+    </div>
+
+</div>
+
+</section>
+
+<section>
+    <h2>🎮 Key Features</h2>
+
+<div class="features-container">
+
+    <div class="feature">
+        <h3>🎯 Smooth Gameplay</h3>
+        <p>Optimized controls and responsive mechanics for better user experience.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🚀 Realistic Physics</h3>
+        <p>Implemented using Unity Rigidbody and collision systems.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🎥 Camera Systems</h3>
+        <p>Dynamic camera follow for immersive gameplay.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🧠 Game Logic</h3>
+        <p>Efficient scripting using C# for interactions and mechanics.</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section>
+    <h2>⚡ Skills</h2>
+    <div class="skills">
+        <span>Unity 2D</span>
+        <span>Unity 3D</span>
+        <span>C#</span>
+        <span>Game Mechanics</span>
+        <span>Physics Systems</span>
+        <span>UI Design</span>
+    </div>
+</section>
+
+<section>
+    <h2>🛠️ Tools & Technologies</h2>
+
+<div class="tools-container">
+    <span>Unity Engine</span>
+    <span>Visual Studio</span>
+    <span>C#</span>
+    <span>Git & GitHub</span>
+    <span>Blender (Basic)</span>
+    <span>UI Design</span>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+ <section id="contact"></section>
+<section>
+    <h2>📞 Contact</h2>
+
+<div class="contact-container">
+
+    <a href="tel:9177162728" class="contact-item">
+        <i class="fas fa-phone-alt"></i> PhoneNo
+    </a>
+
+    <a href="mailto:vennamrishikesh692@gmail.com" class="contact-item">
+        <i class="fas fa-envelope"></i> Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/vennam-rishikesh-20ab6b287" target="_blank" class="contact-item">
+        <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+
+    <a href="https://github.com/AIML-24" target="_blank" class="contact-item">
+        <i class="fab fa-github"></i> GitHub
+    </a>
+
+
+</div>
+
+</section>
+
+<footer>
+    <p>© 2026 Rishikesh | Game Developer 🎮</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 80 },
+    "color": { "value": "#38bdf8" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5 },
+    "size": { "value": 3 },
+    "move": {
+      "enable": true,
+      "speed": 2
+    }
+  }
+});
+</script>
+
+</body>
+</html>
